@@ -1,21 +1,22 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Traitement</th>
-      <th scope="col">Nom du médecin</th>
+      <div class="date-title"><th scope="col">Date</th></div>
+      <div class="traitement-title"><th scope="col">Traitement</th></div>
+      <div class="doctor-name-title"><th scope="col">Nom du médecin</th></div>
     </tr>
   </thead>
   <tbody>
     <% @prescriptions.each do |prescription| %>
     <tr>
-      <td scope="row"><%= prescription[:created_at].strftime('%d-%m-%Y')%></td>
-      <td colspan="1"><%= prescription[:medicine_name]%><%=" - Dose du matin:#{prescription[:dose_morning]} - Dose Après midi:#{prescription[:dose_noon]} - Dose du soir:#{prescription[:dose_night]}"%></td>
-      <td><%= User.find(prescription.user_id).first_name %> <%= User.find(prescription.user_id).last_name %></td>
+      <div class="date-prescription"><td scope="row"><%= prescription[:created_at].strftime('%d-%m-%Y')%></td></div>
+      <td colspan="1"><div class="doctor-name-data"><%= prescription[:medicine_name]%><div class="dose-morning-data"><%="Dose du matin:#{prescription[:dose_morning]}"%><div class="dose-noon-data"></div><%="Dose Après midi:#{prescription[:dose_noon]}"%></div><div class="dose-night-data"><%="Dose du soir:#{prescription[:dose_night]}"%></div></td><td><%= User.find(prescription.user_id).first_name %> <%= User.find(prescription.user_id).last_name %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<i class="fas fa-user fa-3x"></i>
 
 
 
