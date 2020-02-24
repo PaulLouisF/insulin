@@ -1,3 +1,8 @@
+.prescription-card{
+  position:relative;
+  left: 1042px;
+}
+
 .date-title, .traitement-title, .doctor-name-title{
 font-family: Poppins;
 font-style: normal;
@@ -53,28 +58,6 @@ bottom: 91px;
 left:91px;
 }
 
-.dose-day-data {
-postion: relative;
-// display: flex;
-// top:1px;
-}
-
-// .dose-morning-data{
-//   position: relative;
-//   bottom:-25px;
-//   left:133px;
-// }
-
-// .dose-noon-data{
-//   position: relative;
-//   bottom:-25px;
-//   left: 82px;
-// }
-
-// .dose-night-data{
-//   position: relative;
-//   bottom:-25px;
-// }
 
 .doctor-medicine-name-data{
   position: relative;
@@ -82,9 +65,6 @@ postion: relative;
 
 }
 
-.hour {
-  postion:relative;
-}
 
 .doctor-medicine-name {
   position: relative;
