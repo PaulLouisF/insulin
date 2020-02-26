@@ -1,0 +1,74 @@
+.prescription-card{
+  position:relative;
+  left: 1042px;
+}
+
+.date-title, .traitement-title, .doctor-name-title{
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 180%;
+/* or 58px */
+
+/* eerie black */
+
+color: #13182D;
+opacity: 0.7;
+}
+
+.date-prescription-data, .dose-morning-data, .dose-noon-data, .dose-night-data, .doctor-medicine-name-data{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+}
+
+.date-title{
+  position:relative;
+  right:153px;
+  top: 4px;
+}
+
+.doctor-name-title{
+  position:relative;
+  top: 50px;
+}
+
+.traitement-title{
+  position:relative;
+  top: 59px;
+}
+
+.logo-user{
+  position:relative;
+  top: 98px;
+}
+
+.doctor-name-data{
+  position:relative;
+  bottom: 259px;
+  left: 61px;
+}
+
+.date-prescription-data {
+position: relative;
+bottom: 91px;
+left:91px;
+}
+
+
+.doctor-medicine-name-data{
+  position: relative;
+  bottom: 67px;
+
+}
+
+
+.doctor-medicine-name {
+  position: relative;
+  left: 47px;
+  top: -92px;
+}
+

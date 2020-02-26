@@ -1,21 +1,33 @@
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Traitement</th>
-      <th scope="col">Nom du médecin</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="prescription-card">
+    <i class="fas fa-file-pdf fa-2x d-flex justify-content-end"></i>
+    <div class="logo-user-pdf d-flex justify-content-start"><i class="fas fa-user fa-3x"></i></div>
+
+
+
+      <div class="date-title d-flex justify-content-center">Date</div>
+<!--       <div class="doctor-name-title d-flex justify-content-center">Nom et Prénom du médecin</div>
+ -->  <div class="traitement-title">Doses prescrites</div>
     <% @prescriptions.each do |prescription| %>
-    <tr>
-      <td scope="row"><%= prescription[:created_at].strftime('%d-%m-%Y')%></td>
-      <td colspan="1"><%= prescription[:medicine_name]%><%=" - Dose du matin:#{prescription[:dose_morning]} - Dose Après midi:#{prescription[:dose_noon]} - Dose du soir:#{prescription[:dose_night]}"%></td>
-      <td><%= User.find(prescription.user_id).first_name %> <%= User.find(prescription.user_id).last_name %></td>
-    </tr>
+
+      <div class="date-prescription-data">
+        <%= prescription[:created_at].strftime('%d-%m-%Y')%>
+      </div>
+
+      <div class="doctor-medicine-name-data"><i class="fas fa-prescription-bottle-alt fa-2x"></i></div>
+      <div class="doctor-medicine-name">
+          <%= prescription[:medicine_name]%>
+      </div>
+
+      <div class="dose-day-data d-flex">
+        <div class="dose-morning-data col-4"><i class="fas fa-clock"></i> <%="Matin:#{prescription[:dose_morning]}"%></div>
+        <div class="dose-noon-data col-4"><i class="fas fa-clock"></i> <%="Midi:#{prescription[:dose_noon]}"%></div>
+        <div class="dose-night-data col-4"><i class="fas fa-clock"></i> <%="Soir:#{prescription[:dose_night]}"%></div>
+      </div>
+
+
+      <div class="doctor-name-data"><%= User.find(prescription.user_id).first_name %> <%= User.find(prescription.user_id).last_name %></div>
+
     <% end %>
-  </tbody>
-</table>
 
 
 
